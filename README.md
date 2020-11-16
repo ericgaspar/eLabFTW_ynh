@@ -1,11 +1,11 @@
-# MineWeb for YunoHost
+# eLabFTW for YunoHost
 
 [![Integration level](https://dash.yunohost.org/integration/mineweb.svg)](https://dash.yunohost.org/appci/app/mineweb) ![](https://ci-apps.yunohost.org/ci/badges/mineweb.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/mineweb.maintain.svg)  
-[![Install MineWeb with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=mineweb)
+[![Install eLabFTW with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=mineweb)
 
 *[Lire ce readme en français.](./README_fr.md)*
 
-> *This package allows you to install MineWeb quickly and simply on a YunoHost server.  
+> *This package allows you to install eLabFTW quickly and simply on a YunoHost server.  
 If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/install) to learn how to install it.*
 
 ## Overview
@@ -23,7 +23,7 @@ How to configure this app: From an admin panel, a plain file with SSH, or any ot
 
 ## Documentation
 
- * Official documentation: https://docs.mineweb.org/
+ * Official documentation: https://doc.elabftw.net/
  * YunoHost documentation: If specific documentation is needed, feel free to contribute.
 
 ## YunoHost specific features

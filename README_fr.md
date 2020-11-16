@@ -1,11 +1,11 @@
-# MineWeb pour YunoHost
+# eLabFTW pour YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/mineweb.svg)](https://dash.yunohost.org/appci/app/mineweb) ![](https://ci-apps.yunohost.org/ci/badges/mineweb.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/mineweb.maintain.svg)  
-[![Installer MineWeb avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=mineweb)
+[![Integration level](https://dash.yunohost.org/integration/elabftw.svg)](https://dash.yunohost.org/appci/app/elabftw) ![](https://ci-apps.yunohost.org/ci/badges/elabftw.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/elabftw.maintain.svg)  
+[![Installer eLabFTW avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=elabftw)
 
 *[Read this readme in english.](./README.md)* 
 
-> *Ce package vous permet d'installer MineWeb rapidement et simplement sur un serveur YunoHost.  
+> *Ce package vous permet d'installer eLabFTW rapidement et simplement sur un serveur YunoHost.  
 Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install) pour apprendre comment l'installer.*
 
 ## Vue d'ensemble
@@ -15,7 +15,7 @@ MineWeb est un CMS (c'est-à-dire un système de gestion de contenu), en plus si
 
 ## Captures d'écran
 
-![](https://mineweb.org/assets/img/features1_mb.png)
+![]()
 
 ## Configuration
 
@@ -23,7 +23,7 @@ Comment configurer cette application : via le panneau d'administration
 
 ## Documentation
 
-* Documentation officielle : https://docs.mineweb.org/
+* Documentation officielle : https://doc.elabftw.net/
  * Documentation YunoHost : Si une documentation spécifique est nécessaire, n'hésitez pas à contribuer.
 
 ## Caractéristiques spécifiques YunoHost
@@ -48,8 +48,8 @@ Comment configurer cette application : via le panneau d'administration
 
 ## Liens
 
- * Signaler un bug : https://github.com/YunoHost-Apps/mineweb_ynh/issues
- * Site de l'application : https://mineweb.org/
+ * Signaler un bug : https://github.com/YunoHost-Apps/elabftw_ynh/issues
+ * Site de l'application : https://www.elabftw.net/
  * Dépôt de l'application principale :  https://github.com/MineWeb/MineWebCMS/
  * Site web YunoHost : https://yunohost.org/
 

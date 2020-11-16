@@ -1,7 +1,7 @@
-SOURCE_URL=https://github.com/MineWeb/MineWebCMS/archive/v1.10.3.tar.gz
-SOURCE_SUM=561c70cc9b095c104166e36246095dcb9d49e8625f4b8044097a5546dd05ce7d
+SOURCE_URL=https://github.com/elabftw/elabftw/archive/3.5.6.zip
+SOURCE_SUM=ac6caf74c611bc5b6ec9f0b376ab35acdbdbe59047797ac50a40f85a90f05b99
 SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=tar.gz
+SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=true
 SOURCE_EXTRACT=true
-SOURCE_FILENAME=mineweb.tar.gz
+SOURCE_FILENAME=
