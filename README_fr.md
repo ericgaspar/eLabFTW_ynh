@@ -1,30 +1,30 @@
-# Mindmaps pour YunoHost
+# MineWeb pour YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/mindmaps.svg)](https://dash.yunohost.org/appci/app/mindmaps) ![](https://ci-apps.yunohost.org/ci/badges/mindmaps.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/mindmaps.maintain.svg)  
-[![Installer Mindmaps avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=mindmaps)
+[![Integration level](https://dash.yunohost.org/integration/mineweb.svg)](https://dash.yunohost.org/appci/app/mineweb) ![](https://ci-apps.yunohost.org/ci/badges/mineweb.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/mineweb.maintain.svg)  
+[![Installer MineWeb avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=mineweb)
 
 *[Read this readme in english.](./README.md)* 
 
-> *Ce package vous permet d’installer Mindmaps rapidement et simplement sur un serveur YunoHost.  
-Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
+> *Ce package vous permet d'installer MineWeb rapidement et simplement sur un serveur YunoHost.  
+Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install) pour apprendre comment l'installer.*
 
-## Vue d’ensemble
-Mindmaps est une application de mind mapping basée sur HTML5. Il vous permet de créer des cartes mentales soignées dans le navigateur.
+## Vue d'ensemble
+MineWeb est un CMS (c'est-à-dire un système de gestion de contenu), en plus simple, un site complètement personnalisable et intuitif, qui s'adaptera parfaitement à vos serveurs Minecraft !
 
-**Shipped version:** 1.0
+**Version incluse :** 1.10.3
 
-## Captures d’écran
+## Captures d'écran
 
-![](sources/mindmaps-screenshot.jpg)
+![](https://mineweb.org/assets/img/features1_mb.png)
 
-## Démo
+## Configuration
 
-* [Démo officielle](https://www.mindmaps.app/)
+Comment configurer cette application : via le panneau d'administration
 
 ## Documentation
 
- * Documentation officielle : Lien vers la documentation officielle de cette application.
- * Documentation YunoHost : https://yunohost.org/#/app_mindmaps_fr
+* Documentation officielle : https://docs.mineweb.org/
+ * Documentation YunoHost : Si une documentation spécifique est nécessaire, n'hésitez pas à contribuer.
 
 ## Caractéristiques spécifiques YunoHost
 
@@ -35,8 +35,8 @@ Mindmaps est une application de mind mapping basée sur HTML5. Il vous permet de
 
 #### Architectures supportées
 
-* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/mindmaps%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/mindmaps/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/mindmaps%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/mindmaps/)
+* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/mineweb%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/mineweb/)
+* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/minewebP%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/mineweb/)
 
 ## Limitations
 
@@ -48,20 +48,20 @@ Mindmaps est une application de mind mapping basée sur HTML5. Il vous permet de
 
 ## Liens
 
- * Signaler un bug : https://github.com/YunoHost-Apps/mindmaps_ynh/issues
- * Site de l'application : https://www.mindmaps.app/
- * Dépôt de l'application principale : https://github.com/drichard/mindmaps
+ * Signaler un bug : https://github.com/YunoHost-Apps/mineweb_ynh/issues
+ * Site de l'application : https://mineweb.org/
+ * Dépôt de l'application principale :  https://github.com/MineWeb/MineWebCMS/
  * Site web YunoHost : https://yunohost.org/
 
 ---
 
 ## Informations pour les développeurs
 
-Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/mindmaps_ynh/tree/testing).
+Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/mineweb_ynh/tree/testing).
 
 Pour essayer la branche testing, procédez comme suit.
 ```
-sudo yunohost app install https://github.com/YunoHost-Apps/mindmaps_ynh/tree/testing --debug
-or
-sudo yunohost app upgrade mindmaps -u https://github.com/YunoHost-Apps/mindmaps_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/mineweb_ynh/tree/testing --debug
+ou
+sudo yunohost app upgrade mineweb -u https://github.com/YunoHost-Apps/mineweb_ynh/tree/testing --debug
 ```
