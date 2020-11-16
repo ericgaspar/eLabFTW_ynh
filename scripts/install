@@ -100,15 +100,20 @@ ynh_script_progression --message="Configuring PHP-FPM..." --weight=2
 ynh_add_fpm_config --package="$extra_php_dependencies"
 phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 
+#=================================================
+# INSTALL AND INITIALIZE COMPOSER
+#=================================================
+ynh_script_progression --message="Installing with composer..." --weight=30
 
+# Install composer
+ynh_install_composer
 
-
-./composer.phar install --no-dev
-
-yarn install
-yarn buildall
-
-php$phpversion bin/install start
+pushd "$final_path" || ynh_die
+	./composer.phar install --no-dev
+	yarn install
+	yarn buildall
+	php$phpversion bin/install start
+popd || ynh_die
 
 #=================================================
 # MODIFY A CONFIG FILE
