@@ -102,13 +102,14 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 #=================================================
 ynh_script_progression --message="Installing with Composer..." --weight=30
 
+ynh_secure_remove --file="$final_path/composer.lock"
 # Install composer
-ynh_install_composer --install_args="update install"
+ynh_install_composer #--install_args="update install"
 
 #ynh_composer_exec --workdir=$final_path -commands="update --lock"
 
 pushd "$final_path"
-	./composer.phar install --no-dev
+	#./composer.phar install --no-dev
 	yarn install
 	yarn buildall
 	php$phpversion bin/install start
@@ -153,7 +154,7 @@ ynh_script_progression --message="Configuring permissions..." --weight=1
 # Make app public if necessary or protect it
 if [ $is_public -eq 1 ]
 then
-	ynh_permission_update --permission "main" --add "visitors"
+	ynh_permission_update --permission="main" --add="visitors"
 fi
 
 #=================================================
