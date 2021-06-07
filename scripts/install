@@ -47,7 +47,6 @@ ynh_script_progression --message="Storing installation settings..." --weight=1
 
 ynh_app_setting_set --app=$app --key=domain --value=$domain
 ynh_app_setting_set --app=$app --key=path --value=$path_url
-ynh_app_setting_set --app=$app --key=is_public --value=$is_public
 
 #=================================================
 # STANDARD MODIFICATIONS
@@ -59,7 +58,6 @@ ynh_script_progression --message="Creating a MySQL database..." --weight=2
 db_name=$(ynh_sanitize_dbid $app)
 ynh_app_setting_set --app=$app --key=db_name --value=$db_name
 ynh_mysql_setup_db --db_user=$db_name --db_name=$db_name
-db_pwd=$(ynh_app_setting_get --app=$app --key=mysqlpwd)
 
 #=================================================
 # CREATE DEDICATED USER
@@ -102,17 +100,17 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 #=================================================
 # INSTALL AND INITIALIZE COMPOSER
 #=================================================
-ynh_script_progression --message="Installing with composer..." --weight=30
+ynh_script_progression --message="Installing with Composer..." --weight=30
 
 # Install composer
 ynh_install_composer
 
-pushd "$final_path" || ynh_die
+pushd "$final_path"
 	./composer.phar install --no-dev
 	yarn install
 	yarn buildall
 	php$phpversion bin/install start
-popd || ynh_die
+popd
 
 #=================================================
 # MODIFY A CONFIG FILE
@@ -122,7 +120,6 @@ ynh_add_config --template="../conf/database.php" --destination="$final_path/app/
 
 chmod 400 "$final_path/app/Config/database.php"
 chown $app:$app "$final_path/app/Config/database.php"
-
 
 #=================================================
 # STORE THE CONFIG FILE CHECKSUM
@@ -149,13 +146,11 @@ chmod -R 775 $final_path
 #=================================================
 # SETUP SSOWAT
 #=================================================
-ynh_script_progression --message="Configuring SSOwat..." --weight=1
+ynh_script_progression --message="Configuring permissions..." --weight=1
 
 # Make app public if necessary or protect it
 if [ $is_public -eq 1 ]
 then
-	# Everyone can access the app.
-	# The "main" permission is automatically created before the install script.
 	ynh_permission_update --permission "main" --add "visitors"
 fi
 
@@ -170,4 +165,4 @@ ynh_systemd_action --service_name=nginx --action=reload
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Installation of MineWeb completed" --last
+ynh_script_progression --message="Installation of $app completed" --last
