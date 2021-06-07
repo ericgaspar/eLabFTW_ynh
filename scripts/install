@@ -102,14 +102,9 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 #=================================================
 ynh_script_progression --message="Installing with Composer..." --weight=30
 
-#ynh_install_composer --phpversion=$phpversion --workdir=$final_path --install_args="--prefer-source --no-dev"
-
+ynh_install_composer --phpversion=$phpversion --workdir=$final_path --install_args="--prefer-source --no-dev"
 
 pushd "$final_path"
-
-	ynh_exec_as $app curl -s https://getcomposer.org/installer > composer-setup.php
-
-
 	php$phpversion ./composer.phar install --no-dev
 	yarn install
 	yarn buildall
