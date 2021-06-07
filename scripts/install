@@ -103,7 +103,7 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 ynh_script_progression --message="Installing with Composer..." --weight=30
 
 # Install composer
-ynh_install_composer --install_args="update --lock install"
+ynh_install_composer --install_args="update install"
 
 #ynh_composer_exec --workdir=$final_path -commands="update --lock"
 
