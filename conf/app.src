@@ -1,5 +1,5 @@
-SOURCE_URL=https://github.com/elabftw/elabftw/archive/3.5.6.zip
-SOURCE_SUM=ac6caf74c611bc5b6ec9f0b376ab35acdbdbe59047797ac50a40f85a90f05b99
+SOURCE_URL=https://github.com/elabftw/elabftw/archive/refs/tags/4.0.0-beta6.zip
+SOURCE_SUM=39b3a54d0f89b15fc65831c84810bca0d99c6c04e79a3362bea061b750d177f9
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=true
