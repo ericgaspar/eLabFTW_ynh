@@ -60,6 +60,16 @@ ynh_app_setting_set --app=$app --key=db_name --value=$db_name
 ynh_mysql_setup_db --db_user=$db_name --db_name=$db_name
 
 #=================================================
+# INSTALL DEPENDENCIES
+#=================================================
+ynh_script_progression --message="Installing dependencies..." --weight=6
+
+ynh_install_nodejs --nodejs_version=$nodejs_version
+
+# Install Yarn
+ynh_install_extra_app_dependencies --repo="deb https://dl.yarnpkg.com/debian/ stable main" --package="yarn" --key="https://dl.yarnpkg.com/debian/pubkey.gpg"
+
+#=================================================
 # CREATE DEDICATED USER
 #=================================================
 ynh_script_progression --message="Configuring system user..." --weight=2
@@ -76,9 +86,6 @@ ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$final_path"
 #git clone -b 3.5.6 --depth 1 https://github.com/elabftw/elabftw.git $final_path
-
-# Install Yarn
-ynh_install_extra_app_dependencies --repo="deb https://dl.yarnpkg.com/debian/ stable main" --package="yarn" --key="https://dl.yarnpkg.com/debian/pubkey.gpg"
 
 #=================================================
 # NGINX CONFIGURATION
@@ -102,10 +109,10 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 #=================================================
 ynh_script_progression --message="Installing with Composer..." --weight=30
 
-ynh_install_composer --phpversion=$phpversion --workdir=$final_path --install_args="--prefer-source --no-dev"
+ynh_install_composer
 
 pushd "$final_path"
-	php$phpversion ./composer.phar install --no-dev
+	./composer.phar install --no-dev
 	yarn install
 	yarn buildall
 	php$phpversion bin/install start

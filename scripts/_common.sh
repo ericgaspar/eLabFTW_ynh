@@ -5,6 +5,8 @@
 # COMMON VARIABLES
 #=================================================
 
+nodejs_version=14
+
 YNH_PHP_VERSION="7.3"
 
 # dependencies used by the app
