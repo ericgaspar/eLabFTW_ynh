@@ -1,8 +1,5 @@
 # eLabFTW for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/mineweb.svg)](https://dash.yunohost.org/appci/app/mineweb) ![](https://ci-apps.yunohost.org/ci/badges/mineweb.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/mineweb.maintain.svg)  
-[![Install eLabFTW with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=mineweb)
-
 *[Lire ce readme en français.](./README_fr.md)*
 
 > *This package allows you to install eLabFTW quickly and simply on a YunoHost server.  
