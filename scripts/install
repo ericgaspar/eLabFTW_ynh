@@ -128,13 +128,6 @@ chmod 400 "$final_path/app/Config/database.php"
 chown $app:$app "$final_path/app/Config/database.php"
 
 #=================================================
-# STORE THE CONFIG FILE CHECKSUM
-#=================================================
-
-# Calculate and store the config file checksum into the app settings
-ynh_store_file_checksum "$final_path/app/Config/database.php"
-
-#=================================================
 # GENERIC FINALIZATION
 #=================================================
 # SECURE FILES AND DIRECTORIES
