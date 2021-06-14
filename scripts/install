@@ -107,11 +107,17 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 #=================================================
 # INSTALL AND INITIALIZE COMPOSER
 #=================================================
-ynh_script_progression --message="Installing with Composer..." --weight=30
+ynh_script_progression --message="Installing Composer..." --weight=10
 
 ynh_install_composer
 
+#=================================================
+# INSTALL AND INITIALIZE COMPOSER
+#=================================================
+ynh_script_progression --message="Installing with Composer..." --weight=30
+
 pushd "$final_path"
+	./composer.phar update --lock
 	./composer.phar install --no-dev
 	yarn install
 	yarn buildall
