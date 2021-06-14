@@ -7,7 +7,7 @@
 
 nodejs_version=14
 
-YNH_PHP_VERSION="8.0.1"
+YNH_PHP_VERSION="7.4"
 
 # dependencies used by the app
 extra_php_dependencies=""
