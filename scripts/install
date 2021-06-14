@@ -109,7 +109,7 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 #=================================================
 ynh_script_progression --message="Installing Composer..." --weight=10
 
-ynh_install_composer --install_args"update --lock"
+ynh_install_composer --install_args="update --lock"
 
 #=================================================
 # INSTALL AND INITIALIZE COMPOSER
